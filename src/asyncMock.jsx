@@ -1,4 +1,4 @@
-const Products = [
+const products = [
   {
     id: 1,
     name: 'Smartphone 1',
@@ -35,12 +35,12 @@ const Products = [
     stock: 10,
     description: 'Descripcion de smartwatch 2'
   },
-  { id: 5, name: 'Tablet 1', price: 115000, category: 'table', img: './pexels-josh-sorenson-1334597.jpg', stock: 10, description: 'Descripcion de tablet 1' },
+  { id: 5, name: 'Tablet 1', price: 115000, category: 'Tablet', img: './pexels-josh-sorenson-1334597.jpg', stock: 10, description: 'Descripcion de tablet 1' },
   {
     id: 6,
     name: 'Tablet 2',
     price: 95000,
-    category: 'tablet',
+    category: 'Tablet',
     img: './pexels-photomix-company-106341.jpg',
     stock: 10,
     description: 'Descripcion de tablet 2'
@@ -68,7 +68,7 @@ const Products = [
 export const GetProducts = () => {
   return new Promise(resolve => {
     setTimeout(() => {
-      resolve(Products)
+      resolve(products)
     }, 500)
   })
 }
@@ -76,7 +76,18 @@ export const GetProducts = () => {
 export const GetProductsById = productsId => {
   return new Promise(resolve => {
     setTimeout(() => {
-      resolve(Products.find(prod => prod.id === productsId))
+      resolve(products.find(prod => prod.id === productsId))
+    })
+  })
+}
+
+export const GetProductsByCategory = productsCategory => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      const filterProducts = products.filter((prod, index) => {
+        return prod.category.toLowerCase() === productsCategory
+      })
+      resolve(filterProducts)
     })
   })
 }

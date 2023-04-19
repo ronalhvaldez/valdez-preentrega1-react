@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import CartWidget from '../CartWidget/CartWidget'
 
 const NavBar = () => {
@@ -5,9 +6,9 @@ const NavBar = () => {
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to={'/'}>
             E-comemerce
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -22,29 +23,29 @@ const NavBar = () => {
           <div className="collapse navbar-collapse" id="navbarText">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <Link className="nav-link active" aria-current="page" to={'/'}>
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to={'/category/smartwatch'}>
                   Relojes
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to={'/category/smartphone'}>
                   Celulares
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to={'/category/tablet'}>
                   Tablets
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to={'/category/notebook'}>
                   Notebooks
-                </a>
+                </Link>
               </li>
             </ul>
             <span className="navbar-text">
