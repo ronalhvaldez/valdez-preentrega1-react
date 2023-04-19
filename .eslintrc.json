@@ -13,6 +13,7 @@
   "plugins": ["react", "prettier"],
   "rules": {
     "no-use-before-define": "off",
+    "react/react-in-jsx-scope": "off",
     "space-before-function-paren": "off",
     "prettier/prettier": "error",
     "no-undef": "error",
