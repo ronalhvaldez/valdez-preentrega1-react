@@ -1,7 +1,3 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import { CustomProvider } from '@CartContext'
 import { initializeApp } from 'firebase/app'
 
 const firebaseConfig = {
@@ -13,12 +9,4 @@ const firebaseConfig = {
   appId: '1:1023189522732:web:40b8c8408be9186144b489'
 }
 
-initializeApp(firebaseConfig)
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <CustomProvider>
-      <App />
-    </CustomProvider>
-  </React.StrictMode>
-)
+export const FirebaseInit = () => initializeApp(firebaseConfig)

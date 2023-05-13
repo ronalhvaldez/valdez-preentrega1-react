@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
-import CartWidget from '../CartWidget/CartWidget'
+import CartWidget from './CartWidget'
 
 const NavBar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg bg-white ">
         <div className="container-fluid">
           <Link className="navbar-brand" to={'/'}>
             E-comemerce
@@ -48,9 +48,7 @@ const NavBar = () => {
                 </Link>
               </li>
             </ul>
-            <span className="navbar-text">
-              <CartWidget />
-            </span>
+            <CartWidget />
           </div>
         </div>
       </nav>
